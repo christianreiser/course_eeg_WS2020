@@ -56,14 +56,14 @@ bids_path = BIDSPath(subject=subject_id,task="P3",session="P3",
                      datatype='eeg', suffix='eeg',
                      root=bids_root)
 raw = read_raw_bids(bids_path)
-download_CORE.read_annotations_core(bids_path,raw)
+ccs_eeg_utils.read_annotations_core(bids_path,raw)
 raw.load_data()
 ```
 
 
-**T:** Choose the channel "Pz", plot the channel (same as previous HW)
+**T:** Choose the channel "Pz", plot the channel (previous HW it was "Cz")
 
-**T:** Plot the fourier space using `raw.plot_psd`
+**T:** Plot the fourier space using `raw.plot_psd()`
 
 **T:** Now we filter using `raw.filter()`, specify a highpass of 0.5Hz and a lowpass of 50Hz. Plot the fourier spectrum again.
 
